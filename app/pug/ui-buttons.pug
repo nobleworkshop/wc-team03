@@ -1,0 +1,30 @@
+extends layouts/ui-layout.pug
+
+block variables
+	- var title = 'UI - Buttons - кнопки'
+	- var pageClass = 'index-page'
+
+block content
+	br
+	br
+	+button('Подробнее 1','readmore.html')
+	br
+	+button('Подробнее 2','readmore.html','fa-arrow-right')
+
+	br
+	br
+	br
+	.button(href='#') 
+		i.fas.fa-arrow-right
+		| Вперед
+
+	.button(href='#') Подробнее
+
+	.button(href='#') Редактировать
+	.button(href='#') Удалить
+	.button(href='#') Сохранить
+	.button(href='#') Войти
+
+block scripts
+	script(defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js")
+	
