@@ -54,7 +54,7 @@ gulp.task('server:docs', function() {
 });
 
 gulp.task('styles', function() {
-	return gulp.src('./app/less/**/*.less')
+	return gulp.src('./app/less/main.less')
 	.pipe(plumber({
 		errorHandler: notify.onError(function(err){
 			return {
@@ -127,11 +127,14 @@ gulp.task('copy:libs', function(callback) {
     gulp.src('node_modules/jquery/dist/**/*.*')
 		.pipe(gulp.dest('./app/libs/jquery'));
 
-    gulp.src('node_modules/fancybox/dist/**/*.*')
-		.pipe(gulp.dest('./app/libs/fancybox'));
+  //   gulp.src('node_modules/fancybox/dist/**/*.*')
+		// .pipe(gulp.dest('./app/libs/fancybox'));
 
 	gulp.src('node_modules/bootstrap-4-grid/css/**/*.*')
 		.pipe(gulp.dest('./app/libs/bootstrap-4-grid'))
+
+	gulp.src('node_modules/normalize.css/normalize.css')
+		.pipe(gulp.dest('./app/libs/normalize-css/'))
 
 	callback()
 });
