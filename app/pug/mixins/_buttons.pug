@@ -1,8 +1,0 @@
-mixin button(text,link,icon)
-	if icon
-		a.button.button--regular(href=link) 
-			i(class="fas " + icon) 
-			| &nbsp;#{text}
-	else
-		a.button.button--regular(href=link)
-			| #{text}

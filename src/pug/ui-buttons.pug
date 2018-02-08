@@ -1,0 +1,29 @@
+extends layouts/ui-layout.pug
+
+block variables
+	- var title = "UI buttons"
+
+block content
+	.section-ui
+		h1 Buttons UI
+	
+	.section-ui
+		+button('Подробнее', 'regular', '#')
+	.section-ui
+		+button('Назад', 'regular', '#', 'fa-angle-left')
+	.section-ui
+		+button('Вперед', 'regular', '#', 'fa-angle-right', 'right')
+
+
+
+	.section-ui
+		+button('Редактировать', 'edit', '#', 'fa-pencil-alt')
+
+	.section-ui
+		+button('Удалить', 'delete', '#', 'fa-angle-right', 'right')
+
+	.section-ui
+		+button('Сохранить', 'primary', '#', 'fa-save')
+
+	.section-ui
+		+button('Войти', 'login', '#', 'fa-angle-right', 'right')
