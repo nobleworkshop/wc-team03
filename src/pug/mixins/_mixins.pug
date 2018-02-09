@@ -1,0 +1,19 @@
+mixin icon(name,mod)
+	- mod = mod || ''
+	svg(class="icon icon-" + name + ' ' + mod)
+		use(xlink:href="img/sprite.svg#" + name)
+
+
+mixin button(text, modClass, link, icon, right)
+	a(class="button button--" + modClass href=link)
+		if icon 
+			if right 
+				| #{text}
+				span.button__icon.button__icon--right
+					i(class="fas " + icon) 
+			else 
+				span.button__icon.button__icon--left 
+					i(class="fas " + icon) 
+				| #{text}
+		else
+			| #{text}		
