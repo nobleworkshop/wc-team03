@@ -26,17 +26,20 @@ head
 	link(rel="stylesheet", href="css/main.css")
 	<!-- endbuild -->
 
+	//- FONTS
+	link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700", rel="stylesheet")
+
 	<!--[if lt IE 9]>
 	script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
 	<![endif]-->
 	
 body(class=pageClass)
-	include ../modules/header.pug
-	include ../modules/nav.pug
+	//- include ../modules/header.pug
+	//- include ../modules/nav.pug
 	
 	block content
 
-	include ../modules/footer.pug
+	//- include ../modules/footer.pug
 
 	<!-- build:jsLibs js/libs.js -->
 	script(src="libs/jquery/jquery.min.js")

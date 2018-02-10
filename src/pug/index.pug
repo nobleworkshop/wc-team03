@@ -5,9 +5,41 @@ block variables
 	- var pageClass = 'index-page'
 
 block content
-	h1 Hello from Pug!
-	p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae a ipsa fugit. Iusto a aspernatur ratione eos officia perspiciatis est porro. Earum pariatur hic eaque, est architecto odit quae cupiditate?
-	p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae a ipsa fugit. Iusto a aspernatur ratione eos officia perspiciatis est porro. Earum pariatur hic eaque, est architecto odit quae cupiditate?
-	button CLick Me
-	button CLick Me
-	+icon('globe')
+	.container.typographyPage
+		.pageHeader Типографика
+		.row
+			.col-sm-4
+				.title Заголовки
+				h1 Заголовок 1
+				h2 Заголовок 2
+				h3 Заголовок 3
+				h4 Заголовок 4
+				h5 Заголовок 5
+				h6 Заголовок 6
+			.content.col-sm-8
+				.title Текст - абзацы, ссылки в тексте
+				p.
+					Парк находится в горах #[a(href="#") Сьерра-Невада] на востоке штата Калифорния и 
+					занимает огромную даже для Америки площадь, около 3000 кв. км. 
+					#[br]
+					#[br]
+					Центром парка является долина #[a(href="#") Йосемити], 
+					круглый год переполненная туристами, зато в большей части парка никаких 
+					туристов нет. Если вы хотите погулять по территории парка, к вашим услугам 
+					огромная разветвлённая система троп, по которым проложены маршруты 
+					длительностью от получаса до нескольких дней. Ко всем этим прелестям бесплатно 
+					прилагаются животные и птицы. 
+				.title Список
+				ul
+					li 
+						span Первый пункт
+					li
+						span. 
+							Второй пункт. Если вы хотите погулять по территории парка,
+							к вашим услугам огромная разветвлённая система троп, по которым 
+							проложены маршруты длительностью от получаса до нескольких дней. 
+					li 
+						span Третий пункт
+					
+
+	
