@@ -17,6 +17,8 @@ head
 	meta(name="keywords" content="")
 	meta(name="description" content="")
 	
+	link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic-ext")
+	
 	<!-- build:cssVendor css/vendor.css -->
 	link(rel="stylesheet", href="libs/normalize-css/normalize.css")
 	link(rel="stylesheet", href="libs/bootstrap-4-grid/grid.min.css")
@@ -31,12 +33,8 @@ head
 	<![endif]-->
 	
 body(class=pageClass)
-	include ../modules/header.pug
-	include ../modules/nav.pug
 	
 	block content
-
-	include ../modules/footer.pug
 
 	<!-- build:jsLibs js/libs.js -->
 	script(src="libs/jquery/jquery.min.js")
