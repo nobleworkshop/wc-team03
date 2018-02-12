@@ -1,13 +1,11 @@
-include mixins/_mixins.pug
+extends layouts/ui-layout.pug
 
-doctype html
+block variables
+- var title = "UI buttons"
 
-html(lang="ru-RU")
-head
-meta(charset="UTF-8")
-link(href='css/main.css',rel='stylesheet')
-link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic")
-body
+block content
+
+
 h1 UI-elements (Вспомогательные элементы)
 
 
@@ -26,6 +24,7 @@ h1 UI-elements (Вспомогательные элементы)
 +email_busy("Данный email уже занят")
 
 +wrong_email("Неверный email или пароль")
+
 
 
 
