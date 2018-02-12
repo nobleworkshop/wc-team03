@@ -17,3 +17,51 @@ mixin button(text, modClass, link, icon, right)
 				| #{text}
 		else
 			| #{text}		
+
+
+mixin user_badge (name)
+	.user_badge
+		p #{name}
+
+mixin checkbox (title)
+	.label(class="container")
+		p #{title}
+		input(type="checkbox" checked="checked")
+		span(class="checkmark")
+
+mixin avatar(img)
+	.avatar
+		img(src= img)
+
+mixin avatar_small(img)
+	.avatar_small
+		img(src= img)
+
+mixin input_email_error(error_message_shot)
+	.input_email_error.
+			#{error_message_shot}
+
+mixin empty_comment_error(error_message_long)
+	.empty_comment_error.
+			#{error_message_long}
+
+mixin email_busy(error_title)
+	.email_busy
+		.title.
+			#{error_title}
+		.artical
+			p Используйте другой email чтобы создать новый аккаунт
+			p Или воспользуйтесь <a href="#">восстановлением пароля,</a> чтобы войти на сайт.
+
+
+
+mixin wrong_email(error_title)
+	.wrong_email
+		.title.
+			#{error_title}
+		.artical
+			p Введите верные данные для входа или воспользуйтесь <a href="#">восстановлением пароля</a>, чтобы войти на сайт.
+
+
+
+

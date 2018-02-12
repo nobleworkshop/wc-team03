@@ -1,3 +1,5 @@
+include mixins/_mixins.pug
+
 doctype html
 
 html(lang="ru-RU")
@@ -6,22 +8,26 @@ meta(charset="UTF-8")
 link(href='css/main.css',rel='stylesheet')
 link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic")
 body
-h1  UI-elements (Вспомогательные элементы)
+h1 UI-elements (Вспомогательные элементы)
+
+
++user_badge("Пользователь")
+
++checkbox("Запомнить меня")
+
++avatar("img/photo-big.png")
+
++avatar_small("img/foto-small-2.png")
++input_email_error("Введите email")
+
++empty_comment_error("Комментарий не может быть пустым.")
+
+
++email_busy("Данный email уже занят")
+
++wrong_email("Неверный email или пароль")
 
 
 
-include modules/_user_badge
 
-include modules/_checkbox
 
-include modules/_avatar
-
-include modules/_avatar_small
-
-include modules/_input_email_error
-
-include modules/_empty_comment_error
-
-include modules/_email_busy
-
-include modules/_wrong_email
