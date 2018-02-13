@@ -1,29 +1,22 @@
 extends layouts/ui-layout.pug
 
 block variables
-- var title = "UI buttons"
+		- var title ="UI elements"
 
 block content
 
 
-h1 UI-elements (Вспомогательные элементы)
+	h1 UI-elements (Вспомогательные элементы)
 
 
-+user_badge("Пользователь")
-
-+checkbox("Запомнить меня")
-
-+avatar("img/photo-big.png")
-
-+avatar_small("img/foto-small-2.png")
-+input_email_error("Введите email")
-
-+empty_comment_error("Комментарий не может быть пустым.")
-
-
-+email_busy("Данный email уже занят")
-
-+wrong_email("Неверный email или пароль")
+	+user_badge("Пользователь")
+	+checkbox("Запомнить меня")
+	+avatar("img/photo-big.jpg")
+	+avatar_small("img/foto-small-2.jpg")
+	+input_email_error("Введите email")
+	+empty_comment_error("Комментарий не может быть пустым.")
+	+email_busy("Данный email уже занят")
+	+wrong_email("Неверный email или пароль")
 
 
 
