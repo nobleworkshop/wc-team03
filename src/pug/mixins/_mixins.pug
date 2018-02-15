@@ -24,10 +24,11 @@ mixin user_badge (name)
 		p #{name}
 
 mixin checkbox (title)
-	label(class="container")
-		p #{title}
-		input(type="checkbox" checked="checked")
-		span(class="checkmark")
+	.fieldset
+		label(class="form__label-checkbox")
+			input(class="form__input-checkbox" type="checkbox")
+			span(class="form__checkbox")
+			= title
 
 mixin avatar(img)
 	.avatar
