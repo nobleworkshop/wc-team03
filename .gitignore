@@ -9,11 +9,14 @@
 *.vi
 *~
 *.sass-cache
+*.sublime-project
+*.sublime-workspace
 node_modules/
 app/bower/
 build/
 dist/
 .tmp/
+
 
 # OS or Editor folders
 .DS_Store
