@@ -12,6 +12,7 @@
     "bower": "^1.8.2",
     "browser-sync": "^2.23.6",
     "del": "^3.0.0",
+    "fontawesome": "^4.7.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-cheerio": "^0.6.3",
