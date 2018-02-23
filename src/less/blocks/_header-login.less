@@ -1,0 +1,27 @@
+.header-login__list {
+	display: flex;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.header-login__item {
+	margin-right: 50px;
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.header-login__link {
+	color: #FFF;
+	text-decoration: underline;
+	
+	&:hover, &:active, &:focus {
+		text-decoration: none;
+		color: #FFD200;
+	}
+}
+
+.header-login__link.active {
+	text-decoration: none;
+}

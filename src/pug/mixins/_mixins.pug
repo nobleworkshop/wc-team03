@@ -3,7 +3,6 @@ mixin icon(name,mod)
 	svg(class="icon icon-" + name + ' ' + mod)
 		use(xlink:href="img/sprite.svg#" + name)
 
-
 mixin button(text, modClass, link, icon, right)
 	a(class="button button--" + modClass href=link)
 		if icon 
@@ -17,7 +16,6 @@ mixin button(text, modClass, link, icon, right)
 				| #{text}
 		else
 			| #{text}	
-
 
 mixin user_badge (name)
 	.user_badge
@@ -54,15 +52,12 @@ mixin email_busy(error_title)
 			p Используйте другой email чтобы создать новый аккаунт
 			p Или воспользуйтесь <a href="#">восстановлением пароля,</a> чтобы войти на сайт.
 
-
-
 mixin wrong_email(error_title)
 	.wrong_email
 		.title.
 			#{error_title}
 		.artical
 			p Введите верные данные для входа или воспользуйтесь <a href="#">восстановлением пароля</a>, чтобы войти на сайт.
-
 
 mixin input(label, name, placeholder)
 	label.label-title= label
@@ -81,7 +76,6 @@ mixin checkbox(label, name, checked)
 		span.form__checkbox 
 		= label
 
-
 mixin radio(label, name, checked)
 	label.label.form__label-radio
 		if checked
@@ -98,3 +92,10 @@ mixin file(label, desc, name)
 	label(for= name) Выбрать файл
 	span.needed
 	
+mixin header-link(text, link)
+	li.header-nav__item
+		a(target!=attributes.target, class="header-nav__link", class!=attributes.class href=link )= text
+
+mixin header-login-link(text, link)
+	li.header-login__item
+		a(target!=attributes.target, class="header-login__link", class!=attributes.class href=link )= text

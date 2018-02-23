@@ -1,2 +1,21 @@
-header
-	h2 This is Header.pug
+header.header
+	.header-top
+		.header-logo
+			.header-logo__icon
+				i(class="fas fa-paper-plane")
+			.header-logo__text
+				.header-logo__title Digital Lifestyle
+				span.header-logo__subtitle Сайт IT специалиста
+
+		.header-login
+			ul.header-login__list
+				+header-login-link('Регистрация', '#')
+				+header-login-link('Вход', '#')
+	.header-bottom
+		.header-nav
+			ul.header-nav__list
+				+header-link('Главная', '#')
+				+header-link('Обо мне', '#')(target="_blank")
+				+header-link('Работы', '#')
+				+header-link('Блог', '#')
+				+header-link('Контакты', '#')
