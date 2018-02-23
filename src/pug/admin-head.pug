@@ -1,0 +1,60 @@
+extends layouts/ui-layout.pug
+
+block variables
+	- var title = "Admin panel head"
+	- var pageClass = "admin-head"
+
+
+
+block content
+		
+
+		
+		nav.admin-navbar.navbar.d-flex.flex-row
+
+			.avatar_small__frame
+					+avatar_small('../img/foto-small-2.png')
+
+			.admin__title.d-inline-flex.flex-column
+				
+				.admin__name.pt-2
+					p Юрий Ключевский
+				.admin__badge.mt-2
+					+user_badge("Администратор")
+
+			
+			.admin__navigation
+					ul
+						li.d-flex
+							a(href="#")
+								span
+									i.fa.fa-plus-circle.fa-lg(aria-hidden="true")
+									| Пост
+							a(href="#")
+								span
+									i.fa.fa-plus-circle.fa-lg(aria-hidden="true")
+									| Работа
+							a(href="#")
+								span
+									i.fas.fa-edit.fa-lg
+									| Обо мне
+							a(href="#")
+								span
+									i.fas.fa-edit.fa-lg
+									| Контакты
+							a(href="#")
+								span
+									i.fa.fa-envelope.fa-lg(aria-hidden="true")
+									| Сообщения
+							a(href="#").ml-auto.pr-5
+								span
+									i.fas.fa-sign-out-alt.fa-lg
+									| Выход
+
+
+
+
+
+
+
+
