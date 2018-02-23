@@ -1,2 +1,33 @@
-footer
-	h2 This is Footer.pug
+footer#footer.footer
+	.container
+		.row
+			.col-sm-5
+				p.footer_name &copy; Юриий Ключевский
+				p
+					| Создано с #[i.fa.fa-heart] в
+					| #[a(href="http://webcademy.ru/") WebCademy.ru]
+			.col-sm-3
+				p.footer_menu
+					ul
+						li
+							a(href="#") Главная
+						li
+							a(href="#") Обо мне
+						li
+							a(href="#") Работы
+						li
+							a(href="#") Блог
+						li
+							a(href="#") Контакты
+			.col-sm-4
+				p.footer_icons
+					a(href="#" target="blank")
+						i(class="fab fa-vk")
+					a(href="#" target="blank")
+						i(class="fab fa-twitter")
+					a(href="#" target="blank")
+						i(class="fab fa-youtube")
+					a(href="#" target="blank")
+						i(class="fab fa-instagram")
+					a(href="#" target="blank")
+						i(class="fab fa-facebook")
