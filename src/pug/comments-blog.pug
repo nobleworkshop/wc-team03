@@ -1,0 +1,23 @@
+extends layouts/ui-layout.pug
+
+block variables
+    - var title ="Комментарии"
+
+block content
+    .container
+        .title Комментарии
+            h1.heading-1 2 комментария
+        .comment
+            +avatar('img/users-avatar1.png')
+            .content
+                .head
+                    span.name Джон До
+                    span.date #[i.far.fa-clock] дата дата
+                .text Замечательный парк, обязательно отправлюсь туда этим летом.
+        .comment
+            +avatar('img/users-avatar2.png')
+            .content
+                .head
+                    span.name Джон До
+                    span.date #[i.far.fa-clock] дата дата
+                .text Замечательный парк, обязательно отправлюсь туда этим летом.
