@@ -23,30 +23,36 @@ block content
 					+user_badge("Администратор")
 
 			
-			.admin__navigation
-					ul
-						li.d-flex
+			.admin__navigation.d-inline-flex
+
+					ul.d-flex
+						li
 							a(href="#")
 								span
 									i.fa.fa-plus-circle.fa-lg(aria-hidden="true")
 									| Пост
+						li
 							a(href="#")
 								span
 									i.fa.fa-plus-circle.fa-lg(aria-hidden="true")
 									| Работа
+						li
 							a(href="#")
 								span
 									i.fas.fa-edit.fa-lg
 									| Обо мне
+						li
 							a(href="#")
 								span
 									i.fas.fa-edit.fa-lg
 									| Контакты
+						li
 							a(href="#")
 								span
 									i.fa.fa-envelope.fa-lg(aria-hidden="true")
 									| Сообщения
-							a(href="#").ml-auto.pr-5
+						li.ml-auto
+							a(href="#")
 								span
 									i.fas.fa-sign-out-alt.fa-lg
 									| Выход
