@@ -99,3 +99,19 @@ mixin header-link(text, link)
 mixin header-login-link(text, link)
 	li.header-login__item
 		a(target!=attributes.target, class="header-login__link", class!=attributes.class href=link )= text
+
+mixin post-card(img,title,link)
+	.post-card
+		.post-card__img
+			img(src=img)
+		.post-card__title
+			p#title #{title}
+		+button('Читать','regular','link')
+
+mixin portfolio-card(img,title,link)
+	.portfolio-card
+		.portfolio-card__img
+			img(src=img)
+		.portfolio-card__title
+			p #{title}
+		+button('Смотреть кейс','regular','link')
