@@ -30,11 +30,11 @@ mixin checkbox (title)
 
 mixin avatar(img)
 	.avatar
-		img(src= img)
+		img(src=img)
 
 mixin avatar_small(img)
 	.avatar_small
-		img(src= img)
+		img(src=img)
 
 mixin input_email_error(error_message_short)
 	.input_email_error.
@@ -64,8 +64,8 @@ mixin input(label, name, placeholder)
 	input.input(type='text' placeholder= placeholder name= name)
 
 mixin textarea(label, name, placeholder)
-	label.label-title= label
-	textarea.textarea(name= name placeholder= placeholder)
+	label.label-title=label
+	textarea.textarea(name=name, placeholder=placeholder)
 
 mixin checkbox(label, name, checked)
 	label.label.form__label-checkbox
