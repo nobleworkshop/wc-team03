@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
-var size = 50,
-    newsContent=$('#title'),
+var size = 50,    newsContent=$('#title'),
     newsText = newsContent.text();
     
 if(newsText.length > size){
