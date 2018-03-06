@@ -1,0 +1,38 @@
+mixin inputWithLabel(label, name, placeholder)
+	label.label-title= label
+	input.input(type='text' placeholder= placeholder name= name)
+
+mixin input(name, placeholder)
+	input.input(type='text' placeholder= placeholder name= name)
+
+mixin password(name, placeholder)
+	input.input(type='password' placeholder= placeholder name= name)
+
+mixin textarea(label, name, placeholder)
+	label.label-title=label
+	textarea.textarea(name=name, placeholder=placeholder)
+
+mixin checkbox(label, name, checked)
+	label.label.form__label-checkbox
+		if checked
+			input(class="form__input-checkbox" name= name type="checkbox" checked)
+		else
+			input(class="form__input-checkbox" name= name type="checkbox")
+		span.form__checkbox 
+		= label
+
+mixin radio(label, name, checked)
+	label.label.form__label-radio
+		if checked
+			input(class="form__input-radio" type="radio" name= name checked)
+		else
+			input(class="form__input-radio" type="radio" name= name)
+		span.form__radio
+		= label
+	
+mixin file(label, desc, name)
+	label.label-title= label
+	p= desc
+	input(type="file" name= name id= name class="inputfile" data-multiple-caption="{count} файлов выбрано" multiple)
+	label(for= name) Выбрать файл
+	span.needed

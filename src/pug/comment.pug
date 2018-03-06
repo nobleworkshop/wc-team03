@@ -1,0 +1,17 @@
+extends layouts/clean-page.pug
+
+block variables
+	- var title ="Оставить комментарий"
+
+block content
+	.container
+		h1.heading-1 Оставить комментарий
+		.comment
+			+avatar_small('img/foto-small-2.png')
+			.content
+				.head
+					form(action="success.html")
+						.comment__name Юрий Ключевский
+						+error('Комментарий не может быть пустым.')
+						+textarea(textarea, work-description, 'Присоединиться к обсуждению...')
+						+button('Опубликовать', 'regular')

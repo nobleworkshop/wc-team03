@@ -1,12 +1,6 @@
 header.header
 	.header-top
-		.header-logo
-			.header-logo__icon
-				i(class="fas fa-paper-plane")
-			.header-logo__text
-				.header-logo__title Digital Lifestyle
-				span.header-logo__subtitle Сайт IT специалиста
-
+		+logo('Digital Lifestyle', 'Сайт IT специалиста')
 		.header-login
 			ul.header-login__list
 				+header-login-link('Регистрация', '#')
