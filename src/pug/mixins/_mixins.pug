@@ -3,46 +3,9 @@ mixin icon(name,mod)
 	svg(class="icon icon-" + name + ' ' + mod)
 		use(xlink:href="img/sprite.svg#" + name)
 
-mixin button(text, modClass, link, icon, right)
-	a(class="button button--" + modClass href=link)
-		if icon 
-			if right 
-				| #{text}
-				span.button__icon.button__icon--right
-					i(class="fas " + icon) 
-			else 
-				span.button__icon.button__icon--left 
-					i(class="fas " + icon) 
-				| #{text}
-		else
-			| #{text}	
-
 mixin user_badge (name)
 	.user_badge
 		p #{name}
-
-mixin checkbox (title)
-	.fieldset
-		label(class="form__label-checkbox")
-			input(class="form__input-checkbox" type="checkbox")
-			span(class="form__checkbox")
-			= title
-
-mixin avatar(img)
-	.avatar
-		img(src=img)
-
-mixin avatar_small(img)
-	.avatar_small
-		img(src=img)
-
-mixin error(title)
-	if !block
-		.error #{title}
-	else
-		.error.error--with-desc #{title}
-		.error-description= text
-				block
 
 mixin header-link(text, link)
 	li.header-nav__item
@@ -52,22 +15,6 @@ mixin header-login-link(text, link)
 	li.header-login__item
 		a(target!=attributes.target, class="header-login__link", class!=attributes.class href=link )= text
 
-mixin post-card(img,title,link)
-	.post-card
-		.post-card__img
-			img(src=img)
-		.post-card__title
-			p#title #{title}
-		+button('Читать','regular','link')
-
-mixin portfolio-card(img,title,link)
-	.portfolio-card
-		.portfolio-card__img
-			img(src=img)
-		.portfolio-card__title
-			p #{title}
-		+button('Смотреть кейс','regular','link')
-
 mixin logo(title, slogan)
 	.header-logo
 		.header-logo__icon
@@ -76,7 +23,3 @@ mixin logo(title, slogan)
 			.header-logo__title #{title}
 			if slogan
 				span.header-logo__subtitle #{slogan}
-
-
-mixin link(text, link)
-	a(target!=attributes.target, class!=attributes.class href=link )= text

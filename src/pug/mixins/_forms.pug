@@ -1,3 +1,11 @@
+mixin error(title)
+	if !block
+		.error #{title}
+	else
+		.error.error--with-desc #{title}
+		.error-description= text
+				block
+
 mixin inputWithLabel(label, name, placeholder)
 	label.label-title= label
 	input.input(type='text' placeholder= placeholder name= name)

@@ -1,0 +1,35 @@
+extends ../../layouts/ui-layout.pug
+
+block variables
+	- var title = 'Кнопки - UI-kit и HTML фреймворк - Документация'
+	- var pageClass = 'body--dashboard'
+
+block content
+	include ../../sections/ui-nav-inside-ui.pug
+
+	.main-wrapper
+		.title Кнопки
+		
+		.section-ui
+			pre +button('Подробнее', '#')
+			+button('Подробнее', '#')
+		.section-ui
+			pre +button('Назад', '#', 'fa-angle-left')
+			+button('Назад', '#', 'fa-angle-left')
+		.section-ui
+			pre +button('Вперед', '#', 'fa-angle-right', 'right')
+			+button('Вперед', '#', 'fa-angle-right', 'right')
+		.section-ui
+			pre +buttonEdit('Редактировать', '#', 'fa-pencil-alt')
+			+buttonEdit('Редактировать', '#', 'fa-pencil-alt')
+		.section-ui
+			pre +buttonDelete('Удалить', '#', 'fa-angle-right', 'right')
+			+buttonDelete('Удалить', '#', 'fa-angle-right', 'right')
+		.section-ui
+			pre +buttonPrimary('Сохранить', '#', 'fa-save')
+			+buttonPrimary('Сохранить', '#', 'fa-save')
+		.section-ui
+			pre +buttonLogin('Войти', '#', 'fa-angle-right', 'right')
+			+buttonLogin('Войти', '#', 'fa-angle-right', 'right')
+
+		

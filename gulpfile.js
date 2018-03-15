@@ -82,7 +82,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('pug', function() {
-	return gulp.src('./src/pug/*.pug')
+	return gulp.src('./src/pug/pages/**/*.pug')
 	.pipe(plumber({
 		errorHandler: notify.onError(function(err){
 			return {
