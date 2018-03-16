@@ -3,9 +3,8 @@ mixin icon(name,mod)
 	svg(class="icon icon-" + name + ' ' + mod)
 		use(xlink:href="img/sprite.svg#" + name)
 
-mixin user_badge (name)
-	.user_badge
-		p #{name}
+mixin badge (name)
+	.badge #{name}
 
 mixin header-link(text, link)
 	li.header-nav__item

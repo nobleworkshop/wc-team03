@@ -19,12 +19,14 @@ block content
 			.section-ui
 				.title-medium Карточка Пост в блоге
 			.section-ui
-				+card-post("../img/blog-preview.png", "Поездка в New York пример длинного названия поста  Поездка в New York пример длинного названия поста Поездка в New York пример длинного названия поста Поездка в New York пример длинного названия поста" ,"#")
+				+card-post("../img/blog-preview.png", "Поездка в New York пример длинного названия поста ..." ,"#")
 			pre +card-post("../img/blog-preview.png", "Поездка в New York пример длинного названия поста" ,"#")
 
 			.section-ui
 				.title-medium Карточка c контентом
 			.section-ui
 				+card('Подробнее', '#') 
-			pre +card('Подробнее', '#') 
+			pre.
+				+card()
+					p Контент внутри карточки 
 			

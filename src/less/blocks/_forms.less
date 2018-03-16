@@ -1,5 +1,5 @@
 @form-color: #b1bfc7;
-@blue: #1e6791;
+@dark-blue: #1e6791;
 @light-blue: #4FC3F7;
 @white: #fff;
 
@@ -33,9 +33,6 @@
 	height: 200px;
 	resize: vertical;
 }
-
-
-
 
 .fieldset {
 	border: none;
@@ -72,7 +69,7 @@ label:last-child {
     margin-right: 10px;
     width: 20px;
     height: 20px;
-    background: @blue;
+    background: @dark-blue;
 	vertical-align: sub;
     border-radius:  2px;
     background-image: url("../img/form-ui/check.png");
@@ -97,9 +94,7 @@ label:last-child {
 	box-shadow: 0px 0px 15px @light-blue;
 }
 
-
 /* RADIO BUTTONS */
-
 .form__radio {
 	.transition;
 	display: inline-block;
@@ -112,15 +107,13 @@ label:last-child {
 	background: @white;
 	transition: 0.5s;
 	vertical-align: top;
-		// box-shadow: 0 0 0 0.2rem rgba(139, 167, 197, 0.25);
 }
 
 .form__input-radio:checked + .form__radio {
-	background: @blue;
+	background: @dark-blue;
 	border: 0.35rem solid @white;
-	outline: 10px @blue;
-	// box-shadow: 0px 0px 15px @light-blue;
-		box-shadow: 0 0 0 0.2rem rgba(101, 175, 235, 0.37);
+	outline: 10px @dark-blue;
+	box-shadow: 0 0 0 0.2rem rgba(101, 175, 235, 0.37);
 }
 
 .form__input-radio {
@@ -133,12 +126,10 @@ label:last-child {
 }
 
 .form__input-radio:focus + .form__radio {
-	// box-shadow: 0px 0px 15px @light-blue;
-		box-shadow: 0 0 0 0.2rem rgba(101, 175, 235, 0.37);
+	box-shadow: 0 0 0 0.2rem rgba(101, 175, 235, 0.37);
 }
 
 /* FILE UPLOAD */
-
 .inputfile {
 	width: 0.1px;
 	height: 0.1px;
@@ -161,7 +152,7 @@ label:last-child {
 
 .inputfile:focus + label,
 .inputfile + label:hover {
-    background-color: @blue;
+    background-color: @dark-blue;
 }
 
 .inputfile + label {
@@ -174,7 +165,6 @@ label:last-child {
 	padding: 10px 0 0 15px;
 	display: inline-block;
 }
-
 
 .img-post-uploaded {
 	position: relative;

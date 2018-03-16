@@ -19,9 +19,15 @@
 	color: @artical-font-clr;
 	padding: 15px 15px 0;
 	line-height: 1.5;
-	
 	margin-bottom: 20px;
-	
+	-webkit-border-radius: 0 0 6px 6px;
+	        border-radius: 0 0 6px 6px;
+
+	&:after {
+		clear: both;
+		content: "";
+		display: table;
+	}
 	
 	p {
 		line-height: 1.5;
