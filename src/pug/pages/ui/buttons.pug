@@ -31,7 +31,11 @@ block content
 				
 			.section-ui
 				+buttonDelete('Удалить', '#', 'fa-trash', 'right')
-			pre +buttonDelete('Удалить', '#', 'fa-trash', 'right')
+				| &nbsp;
+				+buttonProfile('Профиль', '#' )
+			pre.
+				+buttonDelete('Удалить', '#', 'fa-trash', 'right')
+				+buttonProfile('Профиль', '#' )
 			.section-ui
 			.section-ui
 				+buttonLogin('Войти', '#', 'fa-angle-right', 'right')

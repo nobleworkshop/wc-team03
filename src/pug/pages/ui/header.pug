@@ -2,7 +2,7 @@ extends ../../layouts/ui-layout.pug
 
 block variables
 	- var title = 'Шапка общая - UI-kit и HTML фреймворк - Документация'
-	- var pageClass = 'body--dashboard dark-bg'
+	- var pageClass = 'body--dashboard'
 
 block content
 	include ../../sections/ui-nav-inside-ui.pug
@@ -11,45 +11,32 @@ block content
 		.container.container--left
 			.title Шапка общая
 
-		nav.header-admin
-			.user-block
-				.user-block__avatar
-					+avatar-small('../img/foto-small-2.png')
-				.user-block__text
-					.user-block__name Юрий Ключевский
-					+badge("Администратор")
-			.header-nav.flex-grow
-				+linkFaIcon("Пост", "#", "fa-plus-circle").header-nav__link
-				+linkFaIcon("Работа", "#", "fa-plus-circle").header-nav__link
-				+linkFaIcon("Обо мне", "#", "fa-edit").header-nav__link
-				+linkFaIcon("Контакты", "#", "fa-edit").header-nav__link
-				+linkFaIcon("Сообщения", "#", "fa-envelope").header-nav__link
-				+linkFaIcon("Выход", "#", "fa-sign-out-alt").header-nav__link.ml-auto
-		
+		include ../../sections/header.pug
+
 		.section-ui.mt-20
 			.title-medium Подключение из файла
-		pre include ../../sections/header-admin.pug
+		pre include ../../sections/header.pug
 
 		.section-ui
 			.title-medium Разметка
 		
 		pre.
-			nav.header-admin
-				.user-block
-					.user-block__avatar
-						+avatar-small('../img/foto-small-2.png')
-					.user-block__text
-						.user-block__name Юрий Ключевский
-						+badge("Администратор")
-				.header-nav.flex-grow
-					+linkFaIcon("Пост", "#", "fa-plus-circle").header-nav__link
-					+linkFaIcon("Работа", "#", "fa-plus-circle").header-nav__link
-					+linkFaIcon("Обо мне", "#", "fa-edit").header-nav__link
-					+linkFaIcon("Контакты", "#", "fa-edit").header-nav__link
-					+linkFaIcon("Сообщения", "#", "fa-envelope").header-nav__link
-					+linkFaIcon("Выход", "#", "fa-sign-out-alt").header-nav__link.ml-auto
-
-
-
-
-
+			nav.header
+				.header__top
+					+logo("Digital Lifestyle", "Сайт IT специалиста")
+					.user-block
+						.user-block__avatar
+							+avatar-small('../img/avatar-1.jpg')
+						.user-block__text
+							.user-block__name Юрий Ключевский
+							.user-block__role Пользователь
+							.buttons
+								+buttonProfile('Профиль', '#' )
+								| &nbsp;
+								+buttonProfile('Выход', '#' )
+				.header__nav
+					+link("Главная", "#").header__nav-link
+					+link("Обо мне", "#").header__nav-link.header__nav-link--active
+					+link("Работы", "#").header__nav-link
+					+link("Блог", "#").header__nav-link
+					+link("Контакты", "#").header__nav-link

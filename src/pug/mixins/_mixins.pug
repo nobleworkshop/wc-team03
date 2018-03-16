@@ -19,6 +19,6 @@ mixin logo(title, slogan)
 		.header-logo__icon
 			i(class="fas fa-paper-plane")
 		.header-logo__text
-			.header-logo__title #{title}
+			a.header-logo__title(href="./") #{title}
 			if slogan
 				span.header-logo__subtitle #{slogan}

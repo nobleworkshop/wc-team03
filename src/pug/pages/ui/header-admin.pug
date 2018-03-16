@@ -11,20 +11,7 @@ block content
 		.container.container--left
 			.title Шапка Администратор
 
-		nav.header-admin
-			.user-block
-				.user-block__avatar
-					+avatar-small('../img/foto-small-2.png')
-				.user-block__text
-					.user-block__name Юрий Ключевский
-					+badge("Администратор")
-			.header-nav.flex-grow
-				+linkFaIcon("Пост", "#", "fa-plus-circle").header-nav__link
-				+linkFaIcon("Работа", "#", "fa-plus-circle").header-nav__link
-				+linkFaIcon("Обо мне", "#", "fa-edit").header-nav__link
-				+linkFaIcon("Контакты", "#", "fa-edit").header-nav__link
-				+linkFaIcon("Сообщения", "#", "fa-envelope").header-nav__link
-				+linkFaIcon("Выход", "#", "fa-sign-out-alt").header-nav__link.ml-auto
+		include ../../sections/header-admin.pug
 		
 		.section-ui.mt-20
 			.title-medium Подключение из файла
@@ -37,7 +24,7 @@ block content
 			nav.header-admin
 				.user-block
 					.user-block__avatar
-						+avatar-small('../img/foto-small-2.png')
+						+avatar-small('../img/avatar-1.jpg')
 					.user-block__text
 						.user-block__name Юрий Ключевский
 						+badge("Администратор")

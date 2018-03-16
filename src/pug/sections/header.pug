@@ -1,0 +1,24 @@
+nav.header
+	.header__top
+		+logo("Digital Lifestyle", "Сайт IT специалиста")
+		.user-block
+			+link("Регистрация", "#").user-block__login-link
+			| &nbsp;
+			+link("Вход", "#").user-block__login-link
+
+		.user-block
+			.user-block__avatar
+				+avatar-small('../img/avatar-1.jpg')
+			.user-block__text
+				.user-block__name Юрий Ключевский
+				.user-block__role Пользователь
+				.buttons
+					+buttonProfile('Профиль', '#' )
+					| &nbsp;
+					+buttonProfile('Выход', '#' )
+	.header__nav
+		+link("Главная", "#").header__nav-link
+		+link("Обо мне", "#").header__nav-link.header__nav-link--active
+		+link("Работы", "#").header__nav-link
+		+link("Блог", "#").header__nav-link
+		+link("Контакты", "#").header__nav-link
