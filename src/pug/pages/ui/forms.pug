@@ -1,0 +1,49 @@
+extends ../../layouts/ui-layout.pug
+
+block variables
+	- var title = 'Формы - UI-kit и HTML фреймворк - Документация'
+	- var pageClass = 'body--dashboard'
+
+block content
+	include ../../sections/ui-nav-inside-ui.pug
+
+	.main-wrapper
+		.container.container--left
+			.section-ui
+				.title Элементы формы
+
+				.section-ui
+					+inputWithLabel('Поле для ввода', 'name', 'Введите имя' )
+				pre +inputWithLabel('Поле для ввода', 'name', 'Введите имя' )
+					
+				.section-ui
+					+textarea('Описание работы', 'work-description', 'Как создавался проект')
+				pre +textarea('Описание работы', 'work-description', 'Как создавался проект')
+
+				.section-ui
+					.label-title Чекбокс
+					+checkbox('Я согласен с условиями', 'terms-agree', 'checked')
+				pre +checkbox('Я согласен с условиями', 'terms-agree', 'checked')
+					
+
+				.section-ui
+					.label-title Радио кнопки 
+					+radio('Option 1', 'radio-group', 'checked')
+					+radio('Option 2', 'radio-group')
+				pre.
+					+radio('Option 1', 'radio-group', 'checked')
+					+radio('Option 2', 'radio-group')
+
+				.section-ui
+					+file('Изображение', 'Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.', 'file-2')
+					.img-post-uploaded.mb-25
+						img(src='../img/blog/img-post-uploaded.jpg')
+						+buttonDelete('Удалить', '#', 'fa-angle-right', 'right')
+				pre.
+					+file('Изображение', 'Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.', 'file-2')
+					.img-post-uploaded
+						img(src='../img/blog/img-post-uploaded.jpg')
+						+buttonDelete('Удалить', '#', 'fa-angle-right', 'right')
+
+block scripts
+	script(src="../js/custom-file-input.js")

@@ -3,17 +3,21 @@
 @light-blue: #4FC3F7;
 @white: #fff;
 
+.form {
+	border: none;
+	background-color: transparent;
+}
 
 .form-style {
 	border-radius: 4px;
 	border: 1px solid @form-color;
 	width: 100%;
-	margin-bottom: 20px;
+	// margin-bottom: 20px;
 	padding: 15px;
-	&:hover, &:active, &:focus {
+	&:active, &:focus {
 		outline: none;
-		-webkit-box-shadow: 0 0 10px lighten(@form-color, 0.7);
-		        box-shadow: 0 0 10px lighten(@form-color, 0.7);
+		box-shadow: 0 0 10px lighten(@form-color, 0.7);
+		box-shadow: 0 0 0 0.2rem rgba(139, 167, 197, 0.25);
 	}
 }
 
@@ -21,8 +25,6 @@
 	.form-style;
 	.transition;
 	height: 44px;
-	
-	
 }
 
 .textarea {
@@ -30,20 +32,10 @@
 	.transition-shadow;
 	height: 200px;
 	resize: vertical;
-	border: 2px solid #DDE8EE;
-	
-	&:hover, &:active, &:focus {
-		outline: none;
-		border: 2px solid #C1D7E3;
-		box-shadow: 0 0 25px lighten(@form-color, 0.2);
-	}
 }
 
 
-.form {
-	border: none;
-	background-color: transparent;
-}
+
 
 .fieldset {
 	border: none;
@@ -120,13 +112,15 @@ label:last-child {
 	background: @white;
 	transition: 0.5s;
 	vertical-align: top;
+		// box-shadow: 0 0 0 0.2rem rgba(139, 167, 197, 0.25);
 }
 
 .form__input-radio:checked + .form__radio {
 	background: @blue;
-	border: 0.375rem solid @white;
+	border: 0.35rem solid @white;
 	outline: 10px @blue;
-	box-shadow: 0px 0px 15px @light-blue;
+	// box-shadow: 0px 0px 15px @light-blue;
+		box-shadow: 0 0 0 0.2rem rgba(101, 175, 235, 0.37);
 }
 
 .form__input-radio {
@@ -139,7 +133,8 @@ label:last-child {
 }
 
 .form__input-radio:focus + .form__radio {
-	box-shadow: 0px 0px 15px @light-blue;
+	// box-shadow: 0px 0px 15px @light-blue;
+		box-shadow: 0 0 0 0.2rem rgba(101, 175, 235, 0.37);
 }
 
 /* FILE UPLOAD */

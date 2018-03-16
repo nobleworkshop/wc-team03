@@ -1,15 +1,23 @@
-mixin post-card(img,title,link)
-	.post-card
-		.post-card__img
-			img(src=img)
-		.post-card__title
-			p#title #{title}
-		+button('Читать','regular','link')
+mixin card()
+	.card
+		if block
+			block
+		else
+			p No content provided
 
-mixin portfolio-card(img,title,link)
-	.portfolio-card
-		.portfolio-card__img
+mixin card-portfolio(img,title,link)
+	.card.card-portfolio
+		.card-portfolio__img
 			img(src=img)
-		.portfolio-card__title
-			p #{title}
-		+button('Смотреть кейс','regular','link')
+		.card-portfolio__content
+			h3.card-portfolio__title #{title}
+			+button('Смотреть кейс', '#')
+
+mixin card-post(img,title,link)
+	.card.card-post
+		.card-post__img
+			img(src=img)
+		.card-post__content
+			h3.card-post__title #{title}
+			+button('Читать', '#')
+

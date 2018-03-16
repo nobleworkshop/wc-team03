@@ -8,28 +8,34 @@ block content
 	include ../../sections/ui-nav-inside-ui.pug
 
 	.main-wrapper
-		.title Кнопки
-		
-		.section-ui
-			pre +button('Подробнее', '#')
-			+button('Подробнее', '#')
-		.section-ui
-			pre +button('Назад', '#', 'fa-angle-left')
-			+button('Назад', '#', 'fa-angle-left')
-		.section-ui
-			pre +button('Вперед', '#', 'fa-angle-right', 'right')
-			+button('Вперед', '#', 'fa-angle-right', 'right')
-		.section-ui
-			pre +buttonEdit('Редактировать', '#', 'fa-pencil-alt')
-			+buttonEdit('Редактировать', '#', 'fa-pencil-alt')
-		.section-ui
+		.container.container--left
+			.section-ui
+				.title Кнопки
+			.section-ui
+				+button('Подробнее', '#') 
+				| &nbsp;
+				+button('Назад', '#', 'fa-angle-left')
+				| &nbsp;
+				+button('Вперед', '#', 'fa-angle-right', 'right')
+			pre.
+				+button('Подробнее', '#')
+				+button('Назад', '#', 'fa-angle-left')
+				+button('Вперед', '#', 'fa-angle-right', 'right')
+
+			.section-ui
+				+buttonEdit('Редактировать', '#', 'fa-pencil-alt')
+				| &nbsp;
+				+buttonPrimary('Сохранить', '#', 'fa-save')
+			pre.
+				+buttonEdit('Редактировать', '#', 'fa-pencil-alt')
+				+buttonPrimary('Сохранить', '#', 'fa-save')
+				
+			.section-ui
+				+buttonDelete('Удалить', '#', 'fa-angle-right', 'right')
 			pre +buttonDelete('Удалить', '#', 'fa-angle-right', 'right')
-			+buttonDelete('Удалить', '#', 'fa-angle-right', 'right')
-		.section-ui
-			pre +buttonPrimary('Сохранить', '#', 'fa-save')
-			+buttonPrimary('Сохранить', '#', 'fa-save')
-		.section-ui
+			.section-ui
+			.section-ui
+				+buttonLogin('Войти', '#', 'fa-angle-right', 'right')
 			pre +buttonLogin('Войти', '#', 'fa-angle-right', 'right')
-			+buttonLogin('Войти', '#', 'fa-angle-right', 'right')
 
 		
