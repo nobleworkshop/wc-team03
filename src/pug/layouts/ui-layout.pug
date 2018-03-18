@@ -1,20 +1,16 @@
-include ../mixins/_mixins.pug
-include ../mixins/_forms.pug
+include _mixins-links.pug
 
 block variables
 
 <!DOCTYPE html>
 html(lang="ru")
 	head
-		include ./_head-part.pug
+		include ./_head-part-ui.pug
 		
 	body(class=pageClass)
-		.container
-			.row
-				.col-md-4
-					.user-content
-						include ../modules/ui-nav.pug
-				.col-md-8
-					block content
+		block content
 
-		include ./_footer-part.pug
+		block scripts
+
+		include ./_footer-part-ui.pug
+		

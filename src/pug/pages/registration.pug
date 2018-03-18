@@ -1,0 +1,32 @@
+extends ../layouts/login.pug
+
+block variables
+	- var title = 'Вход на сайт'
+	- var pageClass = 'login-page'
+
+block content
+		.login-header
+			+logo('Digital Lifestyle')
+			+link('Вход', 'login.html')(class="link")
+
+		form(action="success.html").plate
+			.plate__heading Регистрация
+			+error('Введите email')
+			+error('Неверный формат email')
+			+error('Введите пароль')
+			+error("Данный email уже занят")
+				p Используйте другой email чтобы создать новый аккаунт.
+				p Или воспользуйтесь 
+					a(href="#") восстановлением пароля
+					| , чтобы войти на сайт.
+			+input('name', 'Введите имя' )
+			+password('password', 'Пароль' )
+			.plate__links
+				+checkbox('Запомнить меня', name)
+				a(href="#" class="link") Забыл пароль
+			+button('Регистрация', 'login', '#', 'fa-angle-right', 'right')
+
+
+		.login-footer
+			p &copy; Юрий Ключевский
+			p Создано с <i class="fas fa-heart color-heart"></i> в <a href="//webcademy.ru" class="link" target="_blank">WebCademy.ru</a> в 2018 году

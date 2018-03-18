@@ -1,0 +1,101 @@
+mixin button(text, link, icon, right)
+	a(class="button" href=link)
+		if icon 
+			if right 
+				| #{text}
+				span.button__icon.button__icon--right
+					i(class="fas " + icon) 
+			else 
+				span.button__icon.button__icon--left 
+					i(class="fas " + icon) 
+				| #{text}
+		else
+			| #{text}	
+
+mixin buttonEdit(text, link, icon, right)
+	a(class="button button--edit" href=link)
+		if icon 
+			if right 
+				| #{text}
+				span.button__icon.button__icon--right
+					i(class="fas " + icon) 
+			else 
+				span.button__icon.button__icon--left 
+					i(class="fas " + icon) 
+				| #{text}
+		else
+			| #{text}	
+
+mixin buttonDelete(text, link, icon, right)
+	a(class="button button--delete" href=link)
+		if icon 
+			if right 
+				| #{text}
+				span.button__icon.button__icon--right
+					i(class="fas " + icon) 
+			else 
+				span.button__icon.button__icon--left 
+					i(class="fas " + icon) 
+				| #{text}
+		else
+			| #{text}
+
+mixin buttonProfile(text, link, icon, right)
+	a(class="button button--profile" href=link)
+		if icon 
+			if right 
+				| #{text}
+				span.button__icon.button__icon--right
+					i(class="fas " + icon) 
+			else 
+				span.button__icon.button__icon--left 
+					i(class="fas " + icon) 
+				| #{text}
+		else
+			| #{text}	
+
+mixin buttonPrimary(text, link, icon, right)
+	a(class="button button--primary" href=link)
+		if icon 
+			if right 
+				| #{text}
+				span.button__icon.button__icon--right
+					i(class="fas " + icon) 
+			else 
+				span.button__icon.button__icon--left 
+					i(class="fas " + icon) 
+				| #{text}
+		else
+			| #{text}	
+
+mixin buttonLogin(text, link, icon, right)
+	a(class="button button--login" href=link)
+		if icon 
+			if right 
+				| #{text}
+				span.button__icon.button__icon--right
+					i(class="fas " + icon) 
+			else 
+				span.button__icon.button__icon--left 
+					i(class="fas " + icon) 
+				| #{text}
+		else
+			| #{text}	
+
+
+
+
+
+	mixin button(text, modClass, link, icon, right)
+		a(class="button button--" + modClass href=link)
+			if icon 
+				if right 
+					| #{text}
+					span.button__icon.button__icon--right
+						i(class="fas " + icon) 
+				else 
+					span.button__icon.button__icon--left 
+						i(class="fas " + icon) 
+					| #{text}
+			else
+				| #{text}	

@@ -45,6 +45,10 @@ gulp.task('server', function() {
 		gulp.start('copy:js');
 	});
 
+	watch('./src/libs/**/*.*', function(){
+		gulp.start('copy:libs-local');
+	});
+
 	watch(['./src/img/**/*.*', '!./src/img/svg-for-sprites/**/*.svg'], function(){
 		gulp.start('copy:img');
 	});
@@ -82,7 +86,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('pug', function() {
-	return gulp.src('./src/pug/*.pug')
+	return gulp.src('./src/pug/pages/**/*.pug')
 	.pipe(plumber({
 		errorHandler: notify.onError(function(err){
 			return {
@@ -139,6 +143,18 @@ gulp.task('copy:libs', function(callback) {
 	callback()
 });
 
+
+
+gulp.task('copy:libs-local', function(callback) {
+   
+	gulp.src('./src/libs/**/*.*')
+		.pipe(gulp.dest('./build/libs/'))
+
+	callback()
+});
+
+
+
 gulp.task('copy:img', function() {
 	return gulp.src(['./src/img/**/*.*', '!./src/img/svg-for-sprites/**/*.svg'])
 		.pipe(gulp.dest('./build/img'))
@@ -168,7 +184,7 @@ gulp.task('copy:build:files', function(callback) {
 gulp.task('default', function(callback){
     runSequence(
     	'clean:build',
-    	['styles', 'pug', 'svg', 'copy:libs', 'copy:img', 'copy:js'],
+    	['styles', 'pug', 'svg', 'copy:libs', 'copy:libs-local', 'copy:img', 'copy:js'],
     	'server',
 		callback
     )
@@ -222,7 +238,7 @@ gulp.task('html:docs', function() {
 gulp.task('docs', function(callback){
     runSequence(
 		'clean:build',
-    	['styles', 'pug', 'svg', 'copy:libs', 'copy:img', 'copy:js'],
+    	['styles', 'pug', 'svg', 'copy:libs', 'copy:libs-local', 'copy:img', 'copy:js'],
     	'clean:docs',
     	['img:dist', 'copy:docs:files', 'html:docs' ],
     	'server:docs',

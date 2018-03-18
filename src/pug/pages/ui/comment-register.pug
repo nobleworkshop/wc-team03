@@ -1,0 +1,29 @@
+extends ../../layouts/ui-layout.pug
+
+block variables
+	- var title = 'Комментарии - UI-kit и HTML фреймворк - Документация'
+	- var pageClass = 'body--dashboard'
+
+block content
+	include ../../sections/ui-nav-inside-ui.pug
+
+	.main-wrapper
+		.container.container--left
+			.title.mb-0 Комментарии
+
+			.section-ui
+				.title-medium Комментарий - Зарегистрироваться
+			.section-ui
+				.comment.comment--add
+					a(href="#") Войдите
+					|  или 
+					a(href="#") зарегистрируйтесь
+					br
+					| чтобы оставить комментарий
+				pre.
+					.comment-add
+						a(href="#") Войдите
+						|  или 
+						a(href="#") зарегистрируйтесь
+						br
+						| чтобы оставить комментарий

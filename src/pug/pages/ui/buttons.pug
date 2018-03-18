@@ -1,0 +1,42 @@
+extends ../../layouts/ui-layout.pug
+
+block variables
+	- var title = 'Кнопки - UI-kit и HTML фреймворк - Документация'
+	- var pageClass = 'body--dashboard'
+
+block content
+	include ../../sections/ui-nav-inside-ui.pug
+
+	.main-wrapper
+		.container.container--left
+			.title Кнопки
+			.section-ui
+				+button('Подробнее', '#') 
+				| &nbsp;
+				+button('Назад', '#', 'fa-angle-left')
+				| &nbsp;
+				+button('Вперед', '#', 'fa-angle-right', 'right')
+			pre.
+				+button('Подробнее', '#')
+				+button('Назад', '#', 'fa-angle-left')
+				+button('Вперед', '#', 'fa-angle-right', 'right')
+
+			.section-ui
+				+buttonEdit('Редактировать', '#', 'fa-pencil-alt')
+				| &nbsp;
+				+buttonPrimary('Сохранить', '#', 'fa-save')
+			pre.
+				+buttonEdit('Редактировать', '#', 'fa-pencil-alt')
+				+buttonPrimary('Сохранить', '#', 'fa-save')
+				
+			.section-ui
+				+buttonDelete('Удалить', '#', 'fa-trash', 'right')
+				| &nbsp;
+				+buttonProfile('Профиль', '#' )
+			pre.
+				+buttonDelete('Удалить', '#', 'fa-trash', 'right')
+				+buttonProfile('Профиль', '#' )
+			.section-ui
+			.section-ui
+				+buttonLogin('Войти', '#', 'fa-angle-right', 'right')
+			pre +buttonLogin('Войти', '#', 'fa-angle-right', 'right')

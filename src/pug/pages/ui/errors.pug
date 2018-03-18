@@ -1,0 +1,46 @@
+extends ../../layouts/ui-layout.pug
+
+block variables
+	- var title = 'Элементы - UI-kit и HTML фреймворк - Документация'
+	- var pageClass = 'body--dashboard'
+
+block content
+	include ../../sections/ui-nav-inside-ui.pug
+
+	.main-wrapper
+		.container.container--left
+			.title.mb-0 Ошибки
+			p (Вспомогательные элементы)
+
+			.section-ui
+				.title-medium Ошибка в одну строку
+			.section-ui
+				+error("Комментарий не может быть пустым.")
+				pre +error("Комментарий не может быть пустым.")
+			
+			.section-ui
+				.title-medium Ошибка с описанием
+			.section-ui
+				+error("Данный email уже занят")
+					p Используйте другой email чтобы создать новый аккаунт.
+					p Или воспользуйтесь 
+						a(href="#") восстановлением пароля
+						| , чтобы войти на сайт.
+				pre.
+					+error("Данный email уже занят")
+						p Используйте другой email чтобы создать новый аккаунт.
+						p Или воспользуйтесь 
+							a(href="#") восстановлением пароля
+							| , чтобы войти на сайт.
+			.section-ui
+				.title-medium И еще одна
+			.section-ui
+				+error("Неверный email или пароль")
+					p Введите верные данные для входа или воспользуйтесь 
+						a(href="#") восстановлением пароля, 
+						| чтобы войти на сайт.
+				pre.
+					+error("Неверный email или пароль")
+						p Введите верные данные для входа или воспользуйтесь 
+							a(href="#") восстановлением пароля, 
+							| чтобы войти на сайт.

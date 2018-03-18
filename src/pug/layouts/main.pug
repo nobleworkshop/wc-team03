@@ -1,5 +1,4 @@
-include ../mixins/_mixins.pug
-include ../mixins/_forms.pug
+include _mixins-links.pug
 
 block variables
 
@@ -10,9 +9,10 @@ html(lang="ru")
 		
 	body(class=pageClass)
 
-		include ../modules/header.pug
-		//- include ../modules/nav.pug
+		include ../sections/header-admin.pug
+		include ../sections/header.pug
+		
 		block content
-		include ../modules/footer.pug
 
+		include ../sections/footer.pug
 		include ./_footer-part.pug

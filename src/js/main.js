@@ -1,10 +1,12 @@
 $(document).ready(function() {
 
-var size = 50,    newsContent=$('#title'),
-    newsText = newsContent.text();
+	var size = 50,    newsContent=$('#title'),
+	    newsText = newsContent.text();
     
-if(newsText.length > size){
-	newsContent.text(newsText.slice(0, size) + ' ...')};
+	if(newsText.length > size){
+		newsContent.text(newsText.slice(0, size) + ' ...')};
+
+	$(".left-panel").customScrollbar({preventDefaultScroll: true});
 
 });
 

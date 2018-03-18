@@ -1,0 +1,42 @@
+extends ../../layouts/ui-layout.pug
+
+block variables
+	- var title = 'Шапка общая - UI-kit и HTML фреймворк - Документация'
+	- var pageClass = 'body--dashboard'
+
+block content
+	include ../../sections/ui-nav-inside-ui.pug
+
+	.main-wrapper
+		.container.container--left
+			.title Шапка общая
+
+		include ../../sections/header.pug
+
+		.section-ui.mt-20
+			.title-medium Подключение из файла
+		pre include ../../sections/header.pug
+
+		.section-ui
+			.title-medium Разметка
+		
+		pre.
+			nav.header
+				.header__top
+					+logo("Digital Lifestyle", "Сайт IT специалиста")
+					.user-block
+						.user-block__avatar
+							+avatar-small('../img/avatar-1.jpg')
+						.user-block__text
+							.user-block__name Юрий Ключевский
+							.user-block__role Пользователь
+							.buttons
+								+buttonProfile('Профиль', '#' )
+								| &nbsp;
+								+buttonProfile('Выход', '#' )
+				.header__nav
+					+link("Главная", "#").header__nav-link
+					+link("Обо мне", "#").header__nav-link.header__nav-link--active
+					+link("Работы", "#").header__nav-link
+					+link("Блог", "#").header__nav-link
+					+link("Контакты", "#").header__nav-link

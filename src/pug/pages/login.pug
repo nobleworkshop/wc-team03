@@ -1,0 +1,30 @@
+extends ../layouts/login.pug
+
+block variables
+	- var title = 'Вход на сайт'
+	- var pageClass = 'login-page'
+
+block content
+		.login-header
+			+logo('Digital Lifestyle')
+			+link('Регистрация', 'registration.html')(class="link")
+
+		form(action="success.html").plate
+			.plate__heading Вход на сайт
+			+error('Введите email')
+			+error('Неверный формат email')
+			+error('Введите пароль')
+			+error("Неверный email или пароль")
+				p Введите верные данные для входа или воспользуйтесь 
+					a(href="#") восстановлением пароля, 
+					| чтобы войти на сайт.
+			+input('name', 'Введите имя' )
+			+password('password', 'Пароль' )
+			.plate__links
+				+checkbox('Запомнить меня', name)
+				a(href="#" class="link") Забыл пароль
+			+button('Войти', 'login', '#', 'fa-angle-right', 'right')
+
+		.login-footer
+			p &copy; Юрий Ключевский
+			p Создано с <i class="fas fa-heart color-heart"></i> в <a href="//webcademy.ru" class="link" target="_blank">WebCademy.ru</a> в 2018 году

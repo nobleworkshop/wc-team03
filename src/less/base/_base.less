@@ -4,12 +4,24 @@
 	        box-sizing: border-box;
 }
 
+html {
+}
+
 html, body {
 	font-family: 'Open Sans', sans-serif;
     font-size: 16px;
 	padding: 0;
 	margin: 0;
 	height: 100%;
+}
+
+/* fix for top margin collapsing and vertical scroll prevent for body tag? when body height = 100% */
+body::before {
+	content: "";
+	display: block;
+	width: 1px;
+	height: 1px;
+	background-color: transparent;
 }
 
 input, textarea {
@@ -19,8 +31,18 @@ input, textarea {
 	resize: vertical;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-weight: 400;
+	line-height: 1.3;
+}
+
+img {
+	display: block;
+}
+
 .section-ui {
-	padding: 15px 30px;
+	padding: 15px 0px;
 }
 
 a {
@@ -29,4 +51,109 @@ a {
 
 .color-heart {
 	color: #d10946;
+}
+
+.body--dashboard {
+    padding-left: 330px;
+    padding-right: 15px;
+}
+
+.left-panel {
+	background-color: #094071;
+	width: 300px;
+	height: 100%;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	color: #fff;
+	position: fixed;
+	z-index: 1;
+}
+
+.left-panel__section {
+	padding: 15px;
+	// margin-bottom: 20px;
+	border-bottom: 1px solid rgba(138, 188, 232, 0.2);
+	
+	&:last-child {
+		border-bottom: none;
+	}
+}
+
+.left-panel-nav {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.left-panel-nav__link {
+	.transition;
+	display: inline-block;
+	margin-bottom: 15px;
+	color: #ceedff;
+	font-size: 90%;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(138, 188, 232, 0.5);
+	padding: 5px 0;
+	
+	&:hover {
+		color: #fff;	
+	}
+}
+
+.main-wrapper {
+	
+}
+
+
+code, pre {
+    background-color: #f5f5f5;
+    border-radius: 6px;
+    -moz-osx-font-smoothing: auto;
+    -webkit-font-smoothing: auto;
+    font-family: monospace;
+    font-family: Consolas, Monaco, Lucida Console, monospace;
+    font-size: 1rem;
+}
+
+pre {
+    color: #666;
+    line-height: 1.5;
+    margin: 15px 0;
+    overflow: auto;
+    padding: 10px;
+}
+
+
+code {
+    color: #337ab7;
+    font-weight: 400;
+    padding: .3em .8em;
+}
+
+.section-ui pre {
+	margin-top: 0;
+}
+
+.container--left {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.user-content {
+	
+} 
+
+.dark-bg {
+	background-color: #C6DCEA;
+}
+
+.flex-grow {
+	-webkit-flex-grow: 1;
+	        flex-grow: 1;
+}
+
+.footer-bottom {
+	display: flex;
+	flex-direction: column;
 }
