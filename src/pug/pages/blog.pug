@@ -1,0 +1,28 @@
+extends ../layouts/main.pug
+
+block variables
+	- var title = 'Блог - все записи'
+	- var pageClass = 'blog-page footer-bottom'
+
+block content
+	.container.pt-75
+		h1.title-1.mb-40.mt-0 Блог веб-разработчика
+		.row.mb-70
+			.col-md-4
+				+card-post("../img/blog-preview.png", "Поездка в New York пример длинного названия поста" ,"#")
+			.col-md-4
+				+card-post("../img/blog-preview.png", "Поездка в New York пример длинного названия поста" ,"#")
+			.col-md-4
+				+card-post("../img/blog-preview.png", "Поездка в New York пример длинного названия поста" ,"#")
+			.col-md-4
+				+card-post("../img/blog-preview.png", "Поездка в New York пример длинного названия поста" ,"#")
+			.col-md-4
+				+card-post("../img/blog-preview.png", "Поездка в New York пример длинного названия поста" ,"#")
+			.col-md-4
+				+card-post("../img/blog-preview.png", "Поездка в New York длинный текст который не поместится" ,"#")
+			.col-md-4
+				+card-post("../img/blog-preview.png", "Поездка в New York пример длинного названия поста" ,"#")
+			.col-md-4
+				+card-post("../img/blog-preview.png", "Поездка в New York пример длинного названия поста" ,"#")
+			.col-md-4
+				+card-post("../img/blog-preview.png", "Поездка в New York пример длинного названия поста" ,"#")
