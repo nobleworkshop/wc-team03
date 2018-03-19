@@ -1,0 +1,42 @@
+extends ../../layouts/ui-layout.pug
+
+block variables
+	- var title = 'Шапка Администратор - UI-kit и HTML фреймворк - Документация'
+	- var pageClass = 'body--dashboard dark-bg'
+
+block content
+	include ../../sections/ui-nav-inside-ui.pug
+
+	.main-wrapper
+		.container.container--left
+			.title Шапка Администратор
+
+		include ../../sections/header-admin.pug
+		
+		.section-ui.mt-20
+			.title-medium Подключение из файла
+		pre include ../../sections/header-admin.pug
+
+		.section-ui
+			.title-medium Разметка
+		
+		pre.
+			nav.header-admin
+				.user-block
+					.user-block__avatar
+						+avatar-small('../img/avatar-1.jpg')
+					.user-block__text
+						.user-block__name Юрий Ключевский
+						+badge("Администратор")
+				.header-nav.flex-grow
+					+linkFaIcon("Пост", "#", "fa-plus-circle").header-nav__link
+					+linkFaIcon("Работа", "#", "fa-plus-circle").header-nav__link
+					+linkFaIcon("Обо мне", "#", "fa-edit").header-nav__link
+					+linkFaIcon("Контакты", "#", "fa-edit").header-nav__link
+					+linkFaIcon("Сообщения", "#", "fa-envelope").header-nav__link
+					+linkFaIcon("Выход", "#", "fa-sign-out-alt").header-nav__link.ml-auto
+
+
+
+
+

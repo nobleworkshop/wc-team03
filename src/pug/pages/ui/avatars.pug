@@ -1,0 +1,23 @@
+extends ../../layouts/ui-layout.pug
+
+block variables
+	- var title = 'Аватарки - UI-kit и HTML фреймворк - Документация'
+	- var pageClass = 'body--dashboard'
+
+block content
+	include ../../sections/ui-nav-inside-ui.pug
+
+	.main-wrapper
+		.container.container--left
+			.title.mb-0 Аватарки
+
+			.section-ui
+				.title-medium Аватар малый
+			.section-ui
+				+avatar-small("../img/avatar-1.jpg")
+			pre +avatar-small("../img/avatar-1.jpg")
+			.section-ui
+				.title-medium Аватар большой
+			.section-ui
+				+avatar("../img/photo-big.jpg")
+			pre +avatar("../img/photo-big.jpg")

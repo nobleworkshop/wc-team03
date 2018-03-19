@@ -1,0 +1,42 @@
+extends ../../layouts/ui-layout.pug
+
+block variables
+	- var title = 'Сообщение от пользователя - UI-kit и HTML фреймворк - Документация'
+	- var pageClass = 'body--dashboard'
+
+block content
+	include ../../sections/ui-nav-inside-ui.pug
+
+	.main-wrapper
+		.container.container--left
+			.title.mb-0 Сообщение от пользователя
+
+			.section-ui
+				.user-message
+					.user-message__header
+						.user-message__date 22 Августа 2017
+						+buttonDelete('Удалить', '#', 'fa-trash', 'right')
+					.user-message__from
+						.user-message__name Джон До
+						.user-message__email 
+							+link("johndoe@gmail.com", "mailto:johndoe@gmail.com")(target="_blank")
+					.user-message__text
+						p Привет, как дела?) наконец то написал тебе. Посмотри ТЗ нового проекта. Делаем стартап в B2B сфере, юриспуриденция, контракты, право. Инвестиции уже получены и нам нужен классный фронт энд разработчик, как раз - такой как ты. Будет круто если сможешь поработать с нами.
+					.user-message__attachments
+						.user-message__attachments-name Прикрепленные файлы: 
+						+link("Avrora-platform.pdf", "#")(target="_blank")
+				pre.
+					.user-message
+						.user-message__header
+							.user-message__date 22 Августа 2017
+							+buttonDelete('Удалить', '#', 'fa-trash', 'right')
+						.user-message__from
+							.user-message__name Джон До
+							.user-message__email 
+								+link("johndoe@gmail.com", "mailto:johndoe@gmail.com")(target="_blank")
+						.user-message__text
+							p Привет, как дела?) наконец то написал тебе. Посмотри ТЗ нового проекта. Делаем стартап в B2B сфере, юриспуриденция, контракты, право. Инвестиции уже получены и нам нужен классный фронт энд разработчик, как раз - такой как ты. Будет круто если сможешь поработать с нами.
+						.user-message__attachments
+							.user-message__attachments-name Прикрепленные файлы: 
+							+link("Avrora-platform.pdf", "#")(target="_blank")
+					

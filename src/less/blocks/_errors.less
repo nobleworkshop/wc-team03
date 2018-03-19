@@ -1,0 +1,42 @@
+.error {
+	width: 100%;
+	margin-bottom: 20px;
+	font-size: @font-size-general;
+	line-height: 1.3;
+	background-color: @red-title;
+	border-radius: 5px;
+	color: @color-font-title ;
+	padding: 14px 15px 13px;
+}
+
+.error--with-desc {
+	border-radius: 5px 5px 0 0;
+	margin-bottom: 0px;
+}	
+
+.error-description {
+	background-color: #e0e9ee;
+	color: @artical-font-clr;
+	padding: 15px 15px 0;
+	line-height: 1.5;
+	margin-bottom: 20px;
+	-webkit-border-radius: 0 0 6px 6px;
+	        border-radius: 0 0 6px 6px;
+
+	&:after {
+		clear: both;
+		content: "";
+		display: table;
+	}
+	
+	p {
+		line-height: 1.5;
+		margin: 0;
+		margin-bottom: 15px;
+	}
+
+	p a {
+		color: @artical-font-clr;
+	}
+}
+

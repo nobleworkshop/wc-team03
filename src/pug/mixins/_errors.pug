@@ -1,0 +1,7 @@
+mixin error(title)
+	if !block
+		.error #{title}
+	else
+		.error.error--with-desc #{title}
+		.error-description= text
+				block

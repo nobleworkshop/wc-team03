@@ -3,65 +3,22 @@ mixin icon(name,mod)
 	svg(class="icon icon-" + name + ' ' + mod)
 		use(xlink:href="img/sprite.svg#" + name)
 
+mixin badge (name)
+	.badge #{name}
 
-mixin button(text, modClass, link, icon, right)
-	a(class="button button--" + modClass href=link)
-		if icon 
-			if right 
-				| #{text}
-				span.button__icon.button__icon--right
-					i(class="fas " + icon) 
-			else 
-				span.button__icon.button__icon--left 
-					i(class="fas " + icon) 
-				| #{text}
-		else
-			| #{text}		
+mixin header-link(text, link)
+	li.header-nav__item
+		a(target!=attributes.target, class="header-nav__link", class!=attributes.class href=link )= text
 
+mixin header-login-link(text, link)
+	li.header-login__item
+		a(target!=attributes.target, class="header-login__link", class!=attributes.class href=link )= text
 
-mixin user_badge (name)
-	.user_badge
-		p #{name}
-
-mixin checkbox (title)
-	label(class="container")
-		p #{title}
-		input(type="checkbox" checked="checked")
-		span(class="checkmark")
-
-mixin avatar(img)
-	.avatar
-		img(src= img)
-
-mixin avatar_small(img)
-	.avatar_small
-		img(src= img)
-
-mixin input_email_error(error_message_short)
-	.input_email_error.
-			#{error_message_short}
-
-mixin empty_comment_error(error_message_long)
-	.empty_comment_error.
-			#{error_message_long}
-
-mixin email_busy(error_title)
-	.email_busy
-		.title.
-			#{error_title}
-		.artical
-			p Используйте другой email чтобы создать новый аккаунт
-			p Или воспользуйтесь <a href="#">восстановлением пароля,</a> чтобы войти на сайт.
-
-
-
-mixin wrong_email(error_title)
-	.wrong_email
-		.title.
-			#{error_title}
-		.artical
-			p Введите верные данные для входа или воспользуйтесь <a href="#">восстановлением пароля</a>, чтобы войти на сайт.
-
-
-
-
+mixin logo(title, slogan)
+	.header-logo
+		.header-logo__icon
+			i(class="fas fa-paper-plane")
+		.header-logo__text
+			a.header-logo__title(href="./") #{title}
+			if slogan
+				span.header-logo__subtitle #{slogan}

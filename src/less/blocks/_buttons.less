@@ -1,19 +1,25 @@
 .button {
+	.transition;
 	display: inline-block;
+	line-height: 1;
 	outline: none;
+	
 	border-width: 2px;
 	border-color: rgb(221, 232, 238);
 	border-style: solid;
 	border-radius: 22px;
-	height: 40px;
-	padding-left: 30px;
-	padding-right: 30px;
-	padding-top: 9px;
+	
+	height: 2.75em;
+	
+	padding-top: 0.68em; // 
+	padding-left: 1.25em;
+	padding-right: 1.25em;
+	
 	color: #037EC6;
-	background: transparent;
+	background: #FFF;
 	cursor: pointer;
 	text-decoration: none;
-	font-weight: 600;
+	font-weight: 700;
 		
 	&:hover, &:focus {
 		border-color: #DDE8EE;
@@ -45,6 +51,9 @@
 
 .button--delete {
 	.button;
+	padding: 6px 20px;
+	font-size: 14px;
+	height: 32px;
 	color: #FFF;
 	border-color: #b51919;
 	background-color: #b51919;
@@ -59,6 +68,28 @@
 		background-color: #990101;
 	}
 } 
+
+.button--profile {
+	.button;
+	padding: 6px 15px;
+	font-size: 13px;
+	height: 26px;
+	color: #FFF;
+	border: none;
+	background-color: rgba(0,0,0,0.25);
+	font-weight: 400;
+	
+	&:hover, &:focus {
+		border: none;
+		background-color: rgba(0,0,0,0.45);
+	}
+
+	&:active {
+		border: none;
+		background-color: rgba(0,0,0,0.55);
+	}
+} 
+
 
 .button--primary {
 	.button;
@@ -77,7 +108,7 @@
 	}
 } 
 
-.button--login {
+.button--login, a.button--login {
 	.button;
 	border-color: #FFFFFF;
 	background-color: #FFFFFF;
@@ -100,8 +131,10 @@
 
 .button__icon--left {
 	margin-right: 10px;
+	    vertical-align: middle;
 }
 
 .button__icon--right {
 	margin-left: 10px;
+	    vertical-align: middle;
 }

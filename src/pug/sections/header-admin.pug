@@ -1,0 +1,14 @@
+nav.header-admin
+	.user-block
+		.user-block__avatar
+			+avatar-small('../img/avatar-1.jpg')
+		.user-block__text
+			.user-block__name Юрий Ключевский
+			+badge("Администратор")
+	.admin-nav.flex-grow
+		+linkFaIcon("Пост", "#", "fa-plus-circle").admin-nav__link
+		+linkFaIcon("Работа", "#", "fa-plus-circle").admin-nav__link
+		+linkFaIcon("Обо мне", "#", "fa-edit").admin-nav__link
+		+linkFaIcon("Контакты", "#", "fa-edit").admin-nav__link
+		+linkFaIcon("Сообщения", "#", "fa-envelope").admin-nav__link
+		+linkFaIcon("Выход", "#", "fa-sign-out-alt").admin-nav__link.ml-auto
