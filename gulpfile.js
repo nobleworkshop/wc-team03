@@ -143,17 +143,11 @@ gulp.task('copy:libs', function(callback) {
 	callback()
 });
 
-
-
 gulp.task('copy:libs-local', function(callback) {
-   
 	gulp.src('./src/libs/**/*.*')
 		.pipe(gulp.dest('./build/libs/'))
-
 	callback()
 });
-
-
 
 gulp.task('copy:img', function() {
 	return gulp.src(['./src/img/**/*.*', '!./src/img/svg-for-sprites/**/*.svg'])

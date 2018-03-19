@@ -13,7 +13,7 @@ $(document).ready(function() {
 
 	// Cut long post titles in cards Posts title
 	var postTitle = $('.card-post__title'); 
-	maxPostTitleSize = 50;
+	maxPostTitleSize = 40;
 	postTitle.each(function(index, value){
 		var text = $(value).text()
 		if (text.length > maxPostTitleSize) {
