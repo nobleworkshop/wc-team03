@@ -216,7 +216,7 @@ gulp.task('copy:docs:files', function(callback) {
 });
 
 gulp.task('html:docs', function() {
-    return gulp.src('./build/*.html')
+    return gulp.src('./build/**/*.html')
     	.pipe(usemin({
     		//  <!-- build:cssVendor css/vendor.css --> <!-- endbuild -->
 			cssVendor: [function() { return rev() }, function() { return minifyCss() } ], 
