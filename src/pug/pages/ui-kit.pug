@@ -8,17 +8,12 @@ block content
 	include ../sections/ui-nav.pug
 
 	.main-wrapper
-		.container.container--left
-			h1.title-2 Документация по фреймворку
-			p Тут должно быть пару слов о документации к фреймворку.
-			p StyleGuide.
-			ul
-				li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda recusandae sunt voluptatibus soluta, aut nemo. Necessitatibus corrupti quam, rerum accusantium?	
-				li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda recusandae sunt voluptatibus soluta, aut nemo. Necessitatibus corrupti quam, rerum accusantium?	
-				li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda recusandae sunt voluptatibus soluta, aut nemo. Necessitatibus corrupti quam, rerum accusantium?	
-				li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda recusandae sunt voluptatibus soluta, aut nemo. Necessitatibus corrupti quam, rerum accusantium?	
-				li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda recusandae sunt voluptatibus soluta, aut nemo. Necessitatibus corrupti quam, rerum accusantium?	
-				li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda recusandae sunt voluptatibus soluta, aut nemo. Necessitatibus corrupti quam, rerum accusantium?	
-				
+		.container.container--left.user-content.pt-35
+			h1 Документация по фреймворку
+			p Это PUG LESS фреймворк для быстрой верстки проектов. Он содержит в себе все необходимые элементы страницы. Каждый блок или секция имеют готовую pug разметку и less стили. На отдельной странице каждого блока можно найти код его верстки для использования.
 
-			
+			ul
+				+linkList("Документация", "ui/docs.html")
+				+linkList("Codestyle - правила написания кода", "ui/docs-codestyle.html")
+				+linkList("Styleguide - правила по стилям", "ui/docs-styleguide.html")
+				+linkList("Общие рекомендации", "ui/docs-general-recomendations.html")
