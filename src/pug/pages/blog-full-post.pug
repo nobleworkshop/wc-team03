@@ -6,7 +6,7 @@ block variables
 block content
 
 
-	.container
+	.container.mt-80
 		+buttonEdit('Редактировать', '#', 'fa-pencil-alt')
 
 		h1.title-1 Национальный парк Йосемити
@@ -21,15 +21,16 @@ block content
 			p Центром парка является долина Йосемити, круглый год переполненная туристами, зато в большей части парка никаких туристов нет. Если вы хотите погулять по территории парка, к вашим услугам огромная разветвлённая система троп, по которым проложены маршруты длительностью от получаса до нескольких дней. Ко всем этим прелестям бесплатно прилагаются животные и птицы. Если, на ваше счастье, медведей вы скорее всего не увидите, то оленей или бурундуков увидите почти гарантированно, даже не обладая специальными навыками.
 	
 		+button('Назад', '#', 'fa-angle-left')
-		+button('Вперед', '#', 'fa-angle-right', 'right')
-		h_2 2 комментария
+		.pull-right
+			+button('Вперед', '#', 'fa-angle-right', 'right')
 
-		.comment
+		h2.mt-30.mb-30 2 комментария 
+		.comment.mb-10
 			+avatar-small('../img/avatar-2.jpg')
 			.comment__content
 				.comment__head
 					span.comment__name Джон До
-					span.comment__date # [i.far.fa-clock] 05 Мая 2017 года в 15:45
+					span.comment__date #[i.far.fa-clock] 05 Мая 2017 года в 15:45
 				.comment__text Замечательный парк, обязательно отправлюсь туда этим летом.
 
 		.comment
@@ -37,10 +38,11 @@ block content
 			.comment__content
 				.comment__head
 					span.comment__name Джон До
-					span.comment__date # [i.far.fa-clock] 05 Мая 2017 года в 15:45
+					span.comment__date #[i.far.fa-clock] 05 Мая 2017 года в 15:45
 				.comment__text Замечательный парк, обязательно отправлюсь туда этим летом.
 
-		.comment
+		h2.mt-30.mb-20 Оставить комментарий
+		.comment.mb-100 
 			+avatar-small('../img/avatar-1.jpg')
 			.comment__content
 				.head
