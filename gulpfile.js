@@ -33,7 +33,7 @@ gulp.task('server', function() {
 		server: { baseDir: './build/'}
 	});
 
-	watch('./src/pug/**/*.pug', function(){
+	watch('./src/pug/**/*.*', function(){
 		gulp.start('pug');
 	});
 
