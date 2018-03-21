@@ -6,8 +6,9 @@ block variables
 block content
 
 
-	.container.mt-80
-		+buttonEdit('Редактировать', '#', 'fa-pencil-alt')
+	.container.blog_full_post.mt-80
+		.pull-right
+			+buttonEdit('Редактировать', '#', 'fa-pencil-alt')
 
 		h1.title-1 Национальный парк Йосемити
 		.blog-post__links
@@ -24,8 +25,8 @@ block content
 		.pull-right
 			+button('Вперед', '#', 'fa-angle-right', 'right')
 
-		h2.mt-30.mb-30 2 комментария 
-		.comment.mb-10
+		.title-2.mt-30.mb-30 2 комментария 
+		.comment
 			+avatar-small('../img/avatar-2.jpg')
 			.comment__content
 				.comment__head
@@ -41,13 +42,13 @@ block content
 					span.comment__date #[i.far.fa-clock] 05 Мая 2017 года в 15:45
 				.comment__text Замечательный парк, обязательно отправлюсь туда этим летом.
 
-		h2.mt-30.mb-20 Оставить комментарий
+		.title-2.mt-30.mb-20 Оставить комментарий
 		.comment.mb-100 
 			+avatar-small('../img/avatar-1.jpg')
 			.comment__content
-				.head
-					form(action="success.html")
+				form(action="success.html")
+					.head
 						.comment__name Юрий Ключевский
-						+error('Комментарий не может быть пустым.')
-						+textarea(textarea, work-description, 'Присоединиться к обсуждению...')
-						+button('Опубликовать', 'regular')
+					+error('Комментарий не может быть пустым.')
+					+textarea(textarea, work-description, 'Присоединиться к обсуждению...')
+					+button('Опубликовать', 'regular')
