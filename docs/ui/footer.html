@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"/><title>Подвал сайта - UI-kit и HTML фреймворк - Документация</title><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"/><![endif]--><meta name="keywords" content=""/><meta name="description" content=""/><link rel="stylesheet" href="css/vendor-c33a748931.css"/><link rel="stylesheet" href="css/main-5d7a594e0f.css"/><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&amp;subset=cyrillic-ext" rel="stylesheet"><!--[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]--></head><body class="body--dashboard"><div class="left-panel blue-skin"><div class="left-panel__section"><div class="title-2">UI-KIT и PUG фреймворк</div></div><div class="left-panel__section"><p class="strong">Документация</p><div class="left-panel-nav"><a class="left-panel-nav__link" href="docs.html">Документация</a><a class="left-panel-nav__link" href="docs-codestyle.html">Оформление кода</a><a class="left-panel-nav__link" href="docs-styleguide.html">Работа со стилями</a><a class="left-panel-nav__link" href="docs-general-recomendations.html">Общие рекомендации</a></div></div><div class="left-panel__section"><p class="strong">Блоки</p><div class="left-panel-nav"><a class="left-panel-nav__link" href="buttons.html">Кнопки</a><a class="left-panel-nav__link" href="typhography.html">Типографика</a><a class="left-panel-nav__link" href="forms.html">Формы</a><a class="left-panel-nav__link" href="cards.html">Карточки</a><a class="left-panel-nav__link" href="badges.html">Бейджи</a><a class="left-panel-nav__link" href="avatars.html">Аватарки</a><a class="left-panel-nav__link" href="errors.html">Ошибки</a></div></div><div class="left-panel__section"><p class="strong">Секции</p><div class="left-panel-nav"><a class="left-panel-nav__link" href="comment-add.html">Добавить комментарий</a><a class="left-panel-nav__link" href="comments.html">Комментарии</a><a class="left-panel-nav__link" href="comment-register.html">Комментарий регистрация</a><a class="left-panel-nav__link" href="blog-post.html">Пост в блоге</a><a class="left-panel-nav__link" href="pagination.html">Пагинация</a><a class="left-panel-nav__link" href="user-message.html">Сообщение от пользователя</a><a class="left-panel-nav__link" href="header-admin.html">Шапка администратора</a><a class="left-panel-nav__link" href="header.html">Шапка общая</a><a class="left-panel-nav__link" href="footer.html">Подвал сайта</a></div></div><div class="left-panel__section"><p class="strong">Страницы</p><div class="left-panel-nav"><a class="left-panel-nav__link" href="../login.html">Вход на сайт</a><a class="left-panel-nav__link" href="../registration.html">Регистрация</a></div></div></div><div class="main-wrapper"><div class="container container--left"><div class="title">Подвал сайта</div></div><footer class="footer"><div class="container"><div class="row"><div class="col-sm-5"><p>&copy; Юриий Ключевский</p><p>Создано с<i class="fa fa-heart"></i> в <a href="http://webcademy.ru/"><strong>WebCademy.ru</strong></a> в 2018 году</p></div><div class="col-sm-3"><p class="footer-nav"><a class="footer-nav__item" href="#">Главная</a><a class="footer-nav__item" href="#">Обо мне</a><a class="footer-nav__item" href="#">Работы</a><a class="footer-nav__item" href="blog.html">Блог</a><a class="footer-nav__item" href="#">Контакты</a></p></div><div class="col-sm-4"><p class="footer__icons"><a href="#" target="blank"><i class="fab fa-vk"></i></a><a href="#" target="blank"><i class="fab fa-twitter"></i></a><a href="#" target="blank"><i class="fab fa-youtube"></i></a><a href="#" target="blank"><i class="fab fa-instagram"></i></a><a href="#" target="blank"><i class="fab fa-facebook"></i></a></p></div></div></div></footer><div class="section-ui mt-20"><div class="title-medium">Подключение из файла</div></div><pre>include ../../sections/footer.pug</pre><div class="section-ui"><div class="title-medium">Разметка</div></div><pre>footer.footer
+	.container
+		.row
+			.col-sm-5
+				p &copy; Юриий Ключевский
+				p Создано с # [i.fa.fa-heart] в # [a(href="http://webcademy.ru/") # [strong WebCademy.ru]] в 2018 году
+			.col-sm-3
+				p.footer-nav
+					+link("Главная", "#").footer-nav__item
+					+link("Обо мне", "#").footer-nav__item
+					+link("Работы", "#").footer-nav__item
+					+link("Блог", "#").footer-nav__item
+					+link("Контакты", "#").footer-nav__item
+			.col-sm-4
+				p.footer__icons
+					a(href="#" target="blank")
+						i(class="fab fa-vk")
+					a(href="#" target="blank")
+						i(class="fab fa-twitter")
+					a(href="#" target="blank")
+						i(class="fab fa-youtube")
+					a(href="#" target="blank")
+						i(class="fab fa-instagram")
+					a(href="#" target="blank")
+						i(class="fab fa-facebook")</pre></div><script src="js/libs-a09e13ee94.js"></script><script src="js/vendor-fba60370b5.js"></script><script src="js/main-546fbceb50.js"></script><script defer="defer" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script></body></html>

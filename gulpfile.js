@@ -33,7 +33,7 @@ gulp.task('server', function() {
 		server: { baseDir: './build/'}
 	});
 
-	watch('./src/pug/**/*.pug', function(){
+	watch('./src/pug/**/*.*', function(){
 		gulp.start('pug');
 	});
 
@@ -143,17 +143,11 @@ gulp.task('copy:libs', function(callback) {
 	callback()
 });
 
-
-
 gulp.task('copy:libs-local', function(callback) {
-   
 	gulp.src('./src/libs/**/*.*')
 		.pipe(gulp.dest('./build/libs/'))
-
 	callback()
 });
-
-
 
 gulp.task('copy:img', function() {
 	return gulp.src(['./src/img/**/*.*', '!./src/img/svg-for-sprites/**/*.svg'])
@@ -222,7 +216,7 @@ gulp.task('copy:docs:files', function(callback) {
 });
 
 gulp.task('html:docs', function() {
-    return gulp.src('./build/*.html')
+    return gulp.src('./build/**/*.html')
     	.pipe(usemin({
     		//  <!-- build:cssVendor css/vendor.css --> <!-- endbuild -->
 			cssVendor: [function() { return rev() }, function() { return minifyCss() } ], 
