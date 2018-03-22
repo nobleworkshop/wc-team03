@@ -2,6 +2,19 @@
 
 -2 Базовые цвета в LESS переменную, и записать в отдельной странице с кодом цвета и названием переменной
 
+- likely js integrated
+- cool font preset. Header + subtitle + paragraph. Froom google fonts. on diferent pages. Montserrat and others
+- mobile nav open close  
+- anim icon for mobile nav
+- different notifications, diff colors, not only error
+- пример cover page
+- пример sticky navigation
+- цвета
+- градиенты - пример картинки с dribble
+- particles effect built in
+- bg fixed class
+-2 Сделать фавиконку
+-2 Добавить .idea в .gitignore
 - стилизация тега <hr> внутри user-content
 - плавные переходы между страниц
 - полоса загрузки вверху при смене страниц как youtube
