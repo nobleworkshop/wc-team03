@@ -17,12 +17,12 @@ block content
 				.comment
 					+avatar-small('../img/avatar-1.jpg')
 					.comment__content
-						.head
-							form(action="success.html")
-								.comment__name Юрий Ключевский
-								+error('Комментарий не может быть пустым.')
-								+textarea(textarea, work-description, 'Присоединиться к обсуждению...')
-								+button('Опубликовать', 'regular')
+						.comment__head
+							.comment__name Юрий Ключевский
+						form(action="success.html")
+							+error('Комментарий не может быть пустым.')
+							+textarea(textarea, work-description, 'Присоединиться к обсуждению...')
+							+button('Опубликовать', 'regular')
 				pre.
 					.comment
 						+avatar-small('../img/avatar-1.jpg')

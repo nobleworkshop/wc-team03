@@ -1,7 +1,15 @@
 .left-panel.blue-skin
 	.left-panel__section
 		.title-2 UI-KIT и PUG фреймворк
-		
+	
+	.left-panel__section
+		p.strong Документация
+		.left-panel-nav
+			+linkLeftPanel("Документация", "docs.html")
+			+linkLeftPanel("Оформление кода", "docs-codestyle.html")
+			+linkLeftPanel("Работа со стилями", "docs-styleguide.html")
+			+linkLeftPanel("Общие рекомендации", "docs-general-recomendations.html")
+
 	.left-panel__section
 		p.strong Блоки
 		.left-panel-nav
@@ -20,6 +28,7 @@
 			+linkLeftPanel("Комментарии", "comments.html")
 			+linkLeftPanel("Комментарий регистрация", "comment-register.html")
 			+linkLeftPanel("Пост в блоге", "blog-post.html")
+			+linkLeftPanel("Пагинация", "pagination.html")
 			+linkLeftPanel("Сообщение от пользователя", "user-message.html")
 			//- +linkLeftPanel("Вспомогательные элементы", "elements.html")
 
