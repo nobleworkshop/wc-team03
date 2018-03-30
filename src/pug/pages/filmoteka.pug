@@ -1,0 +1,29 @@
+extends ../layouts/clean.pug
+
+block variables
+	- var title = 'UI-kit и HTML фреймворк - Документация'
+	- var pageClass = ''
+
+block content
+	.container.user-content.pt-35
+		h1.title-1  Фильмотека
+		.card.mb-20
+			h4.title-4 Такси 2
+			+badge("комедия")
+			+badge("2000")
+		.card.mb-20
+			h4.title-4 Облачный атлас
+			+badge("драма")
+			+badge("2012")
+
+		.panel-holder.mt-80.mb-40
+			.title-4.mt-0 Добавить фильм
+			form(action="index.php" method="POST")
+				+error('Название фильма не может быть пустым.')
+				+inputWithLabel('Название фильма', 'title', 'Такси 2' )
+				.row
+					.col
+						+inputWithLabel('Жанр', 'genre', 'комедия' )
+					.col
+						+inputWithLabel('Год', 'year', '2000' )
+				+button('Добавить', 'regular')
