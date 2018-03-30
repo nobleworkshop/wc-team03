@@ -1,0 +1,54 @@
+extends ../layouts/main.pug
+
+block variables
+	- var title = 'Страница Блог - с отдельным постом'
+
+block content
+
+
+	.container.blog-full-post.mt-80
+		.pull-right
+			+buttonEdit('Редактировать', '#', 'fa-pencil-alt')
+
+		h1.title-1 Национальный парк Йосемити
+		.blog-post__links
+			+link('Емельян Казаков', '#')(class="blog-post__link blog-post__link--name")
+			+link('Путешествия', '#')(class="blog-post__link blog-post__link--event")
+			span(class="blog-post__link blog-post__link--date") 16 марта 2017
+			+link('2 комментария', '#')(class="blog-post__link blog-post__link--comments")
+		.blog-post__image(style="background-image: url('../img/yosemity.jpg');")
+		.blog-post__text.user-content
+			p Парк находится в горах Сьерра-Невада на востоке штата Калифорния и занимает огромную даже для Америки площадь, около 3000 кв. км. На этой площади расположены гранитные скальные стены огромной высоты, которыми, собственно, в первую очередь и знаменит парк, водопады, среди которых одни из самых высоких в США, три рощи гигантской секвойи — самого долгоживущего в мире дерева и самого большого по диаметру ствола, а также масса рек, озёр, лесов и лугов.
+			p Центром парка является долина Йосемити, круглый год переполненная туристами, зато в большей части парка никаких туристов нет. Если вы хотите погулять по территории парка, к вашим услугам огромная разветвлённая система троп, по которым проложены маршруты длительностью от получаса до нескольких дней. Ко всем этим прелестям бесплатно прилагаются животные и птицы. Если, на ваше счастье, медведей вы скорее всего не увидите, то оленей или бурундуков увидите почти гарантированно, даже не обладая специальными навыками.
+	
+		+button('Назад', '#', 'fa-angle-left')
+		.pull-right
+			+button('Вперед', '#', 'fa-angle-right', 'right')
+
+		.title-2.mt-30.mb-30 2 комментария 
+		.comment
+			+avatar-small('../img/avatar-2.jpg')
+			.comment__content
+				.comment__head
+					span.comment__name Джон До
+					span.comment__date #[i.far.fa-clock] 05 Мая 2017 года в 15:45
+				.comment__text Замечательный парк, обязательно отправлюсь туда этим летом.
+
+		.comment
+			+avatar-small('../img/avatar-2.jpg')
+			.comment__content
+				.comment__head
+					span.comment__name Джон До
+					span.comment__date #[i.far.fa-clock] 05 Мая 2017 года в 15:45
+				.comment__text Замечательный парк, обязательно отправлюсь туда этим летом.
+
+		.title-2.mt-30.mb-20 Оставить комментарий
+		.comment.mb-100 
+			+avatar-small('../img/avatar-1.jpg')
+			.comment__content
+				form(action="success.html")
+					.head
+						.comment__name Юрий Ключевский
+					+error('Комментарий не может быть пустым.')
+					+textarea(textarea, work-description, 'Присоединиться к обсуждению...')
+					+button('Опубликовать', 'regular')

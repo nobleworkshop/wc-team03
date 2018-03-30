@@ -16,8 +16,7 @@ app/bower/
 build/
 dist/
 .tmp/
-.idea/
-
+.idea
 
 # OS or Editor folders
 .DS_Store
